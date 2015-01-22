@@ -26,8 +26,8 @@ public class MecanumDrive extends Command {
 
     protected void execute() {
     	 double cartesianX = Robot.oi.getX(),
-                 cartesianY = Robot.oi.getY(),
-                 rotation = Robot.oi.getRotation();
+                cartesianY = Robot.oi.getY(),
+                rotation = Robot.oi.getRotation();
           
     	 double x, y, r;
           

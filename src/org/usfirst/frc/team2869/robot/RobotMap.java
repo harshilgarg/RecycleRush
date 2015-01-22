@@ -13,6 +13,7 @@ public class RobotMap {
 	public static int ROTATEBUTTON = 2;
 	public static int STOPBUTTON = 3;
 	public static int HALFBUTTON = 4;
+	public static int TURN180BUTTON = 5;
 	
     public static int FRONTLEFT = 0;
     public static int FRONTRIGHT = 3;

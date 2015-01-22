@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 import org.usfirst.frc.team2869.robot.commands.HalfDrive;
+import org.usfirst.frc.team2869.robot.commands.Robot180;
 import org.usfirst.frc.team2869.robot.commands.SpinDrive;
 import org.usfirst.frc.team2869.robot.commands.StopDrive;
 
@@ -20,10 +21,13 @@ public class OI {
     Button stopButton = new JoystickButton(driveStick, RobotMap.STOPBUTTON);
     Button halfButton = new JoystickButton(driveStick, RobotMap.HALFBUTTON);
     
+    Button turn180Button = new JoystickButton(driveStick, RobotMap.TURN180BUTTON);
+    
     public OI() {
     	rotateButton.whileHeld(new SpinDrive());
     	stopButton.toggleWhenPressed(new StopDrive());
     	halfButton.toggleWhenPressed(new HalfDrive());
+    	turn180Button.whenPressed(new Robot180());
     }
     
     public double getX() {
