@@ -24,7 +24,7 @@ import com.kauailabs.nav6.frc.IMUAdvanced;
  */
 public class Robot extends IterativeRobot {
 	
-	SerialPort serialport;
+	SerialPort serialPort;
 	IMUAdvanced imu;
 	
 	boolean initialization;
@@ -42,8 +42,8 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
     	
       	try {
-        	serialport = new SerialPort(57600, SerialPort.Port.kMXP);
-    		imu = new IMUAdvanced(serialport, (byte) 50);
+        	serialPort = new SerialPort(57600, SerialPort.Port.kMXP);
+    		imu = new IMUAdvanced(serialPort, (byte) 50);
         	} catch( Exception ex ) {
         		
         	}
