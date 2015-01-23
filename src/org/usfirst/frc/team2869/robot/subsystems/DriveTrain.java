@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.SerialPort;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -94,6 +95,26 @@ public class DriveTrain extends Subsystem {
     
     public IMUAdvanced getIMU() {
     	return imu;
+    }
+    
+    public double getYaw() {
+    	return imu.getYaw();
+    }
+    
+    public double getModifiedYaw() {
+    	double x = imu.getYaw();
+    	if (imu.getYaw() >= 0 && imu.getYaw() <= 180) {
+    		SmartDashboard.putNumber("yaw_modified", x);
+    		return x;
+    	}
+    	else {
+    		double y = x + 360;
+    		SmartDashboard.putNumber("yaw_modified", y);
+    		if (y == 360) {
+    			return 0;
+    		}
+    		return y;
+    	}
     }
 }
 

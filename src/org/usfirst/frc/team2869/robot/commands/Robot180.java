@@ -10,25 +10,31 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot180 extends Command {
 	
-	double yaw = Robot.chassis.getIMU().getYaw();
 	boolean isFinished = false;
+	
+	double yaw = Robot.chassis.getModifiedYaw();
+	double target;
 
     public Robot180() {
         requires(Robot.chassis);
     }
 
     protected void initialize() {
-    	
+    	target = yaw + 180;
+    	target = target % 360;
     }
 
     protected void execute() {
-    	SmartDashboard.putNumber("yaw", Robot.chassis.getIMU().getYaw());
-    	if (Robot.chassis.getIMU().getYaw() < yaw + 180) {
-    		Robot.chassis.mecanumDrive(0, 0, 0.8, 0);
-    	}
-    	else {
+    	SmartDashboard.putNumber("yaw", Robot.chassis.getModifiedYaw());
+    	double low = target - 5;
+    	double high = target + 5;
+    	double currentYaw = Robot.chassis.getModifiedYaw();
+    	
+    	if (currentYaw > low && currentYaw < high) {
     		isFinished = true;
     		Robot.chassis.mecanumDrive(0, 0, 0, 0);
+    	}
+    	else {
     	}
     }
 
