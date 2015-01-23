@@ -18,9 +18,9 @@ public class MecanumDrive extends Command {
     }
 
     protected void initialize() {
-    	Robot.chassis.setOrientationFrontLeft(true);
+    	Robot.chassis.setOrientationFrontLeft(false);
         Robot.chassis.setOrientationFrontRight(true);
-        Robot.chassis.setOrientationRearLeft(true);
+        Robot.chassis.setOrientationRearLeft(false);
         Robot.chassis.setOrientationRearRight(true);
     }
 

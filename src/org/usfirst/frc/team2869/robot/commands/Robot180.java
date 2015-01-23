@@ -3,14 +3,15 @@ package org.usfirst.frc.team2869.robot.commands;
 import org.usfirst.frc.team2869.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * @author BETHPAGE HIGH SCHOOL, 2015 TEAM #869
  */
 public class Robot180 extends Command {
 	
-	double yaw = Robot.getIMU().getYaw();
-	boolean isFinished = true;
+	double yaw = Robot.chassis.getIMU().getYaw();
+	boolean isFinished = false;
 
     public Robot180() {
         requires(Robot.chassis);
@@ -21,8 +22,9 @@ public class Robot180 extends Command {
     }
 
     protected void execute() {
-    	if (Robot.getIMU().getYaw() < yaw + 180) {
-    		Robot.chassis.mecanumDrive(0, 0, 1, 0);
+    	SmartDashboard.putNumber("yaw", Robot.chassis.getIMU().getYaw());
+    	if (Robot.chassis.getIMU().getYaw() < yaw + 180) {
+    		Robot.chassis.mecanumDrive(0, 0, 0.8, 0);
     	}
     	else {
     		isFinished = true;

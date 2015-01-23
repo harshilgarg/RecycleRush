@@ -24,10 +24,10 @@ import com.kauailabs.nav6.frc.IMUAdvanced;
  */
 public class Robot extends IterativeRobot {
 	
-	SerialPort serialPort;
+	/*SerialPort serialPort;
 	static IMUAdvanced imu;
 	
-	boolean initialization;
+	boolean initialization;*/
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static final DriveTrain chassis = new DriveTrain();
@@ -41,7 +41,7 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
     	
-      	try {
+      	/*try {
         	serialPort = new SerialPort(57600, SerialPort.Port.kMXP);
     		imu = new IMUAdvanced(serialPort, (byte) 50);
         	} catch( Exception ex ) {
@@ -56,7 +56,7 @@ public class Robot extends IterativeRobot {
                 Timer.delay(0.3);
                 imu.zeroYaw();
                 initialization = false;
-            }
+            }*/
     	
 		oi = new OI();
         autonomousCommand = new ExampleCommand();
@@ -75,7 +75,7 @@ public class Robot extends IterativeRobot {
     }
 
     public void teleopInit() {
-    	SmartDashboard.putBoolean("IMU_Connected",      imu.isConnected());
+    	/*SmartDashboard.putBoolean("IMU_Connected",      imu.isConnected());
         SmartDashboard.putBoolean("IMU_IsCalibrating",  imu.isCalibrating());
         SmartDashboard.putNumber( "IMU_Yaw",            imu.getYaw());
         SmartDashboard.putNumber( "IMU_Pitch",          imu.getPitch());
@@ -86,7 +86,7 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putNumber( "IMU_Accel_X",        imu.getWorldLinearAccelX());
         SmartDashboard.putNumber( "IMU_Accel_Y",        imu.getWorldLinearAccelY());
         SmartDashboard.putBoolean("IMU_IsMoving",       imu.isMoving());
-        SmartDashboard.putNumber( "IMU_Temp_C",         imu.getTempC());
+        SmartDashboard.putNumber( "IMU_Temp_C",         imu.getTempC());*/
 
 		if (autonomousCommand != null) autonomousCommand.cancel();
     }
@@ -102,7 +102,7 @@ public class Robot extends IterativeRobot {
         LiveWindow.run();
     }
     
-    public static IMUAdvanced getIMU() {
+    /*public static IMUAdvanced getIMU() {
     	return imu;
-    }
+    }*/
 }
