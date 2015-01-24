@@ -1,10 +1,10 @@
 package org.usfirst.frc.team2869.robot.subsystems;
 
-import org.usfirst.frc.team2869.robot.PowerControlTalon;
 import org.usfirst.frc.team2869.robot.RobotMap;
 import org.usfirst.frc.team2869.robot.commands.MecanumDrive;
+import org.usfirst.frc.team2869.utilities.PowerControlTalon;
 
-import com.kauailabs.nav6.frc.IMUAdvanced;
+import com.kauailabs.navx.mxp.IMUAdvanced;
 
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.SerialPort;

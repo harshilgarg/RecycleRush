@@ -8,11 +8,9 @@
 /* in the root directory of the project.                                      */
 /*----------------------------------------------------------------------------*/
 
-package com.kauailabs.nav6.frc;
+package com.kauailabs.navx.mxp;
 
 import java.util.Arrays;
-
-import com.kauailabs.nav6.IMUProtocol;
 
 import edu.wpi.first.wpilibj.PIDSource;
 import edu.wpi.first.wpilibj.SensorBase;

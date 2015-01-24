@@ -1,4 +1,4 @@
-package org.usfirst.frc.team2869.robot;
+package org.usfirst.frc.team2869.utilities;
 
 import edu.wpi.first.wpilibj.Jaguar;
 

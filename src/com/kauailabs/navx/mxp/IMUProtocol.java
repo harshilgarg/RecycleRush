@@ -21,7 +21,7 @@
  THE SOFTWARE.
  ===============================================
  */
-package com.kauailabs.nav6;
+package com.kauailabs.navx.mxp;
 
 public class IMUProtocol {
 

@@ -13,7 +13,7 @@ import org.usfirst.frc.team2869.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2869.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team2869.robot.subsystems.ExampleSubsystem;
 
-import com.kauailabs.nav6.frc.IMUAdvanced;
+import com.kauailabs.navx.mxp.IMUAdvanced;
 
 /**
  * The VM is configured to automatically run this class, and to call the
