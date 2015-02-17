@@ -19,4 +19,10 @@ public class RobotMap {
     public static int FRONTRIGHT = 3;
     public static int REARLEFT = 2;
     public static int REARRIGHT = 1;
+	
+    public static int VICTOR_LEFT = 5;
+	public static int VICTOR_RIGHT = 6;
+	public static int UPELEVATORBUTTON = 2;
+	public static int DOWNELEVATORBUTTON = 3;
+	public static int STOPELEVATORBUTTON = 4;
 }

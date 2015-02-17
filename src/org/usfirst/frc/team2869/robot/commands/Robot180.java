@@ -35,6 +35,7 @@ public class Robot180 extends Command {
     		Robot.chassis.mecanumDrive(0, 0, 0, 0);
     	}
     	else {
+    		Robot.chassis.mecanumDrive(0, 0, 0.8, 0);
     	}
     }
 

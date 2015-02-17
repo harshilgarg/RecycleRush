@@ -9,8 +9,8 @@
 /*----------------------------------------------------------------------------*/
 
 package com.kauailabs.navx.mxp;
-import java.util.Arrays;
 
+import java.util.Arrays;
 import edu.wpi.first.wpilibj.SerialPort;
 
 /**
